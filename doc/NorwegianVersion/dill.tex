@@ -1,0 +1,229 @@
+
+%  last update : 10/jan/2004  mhj
+
+
+\documentclass[11pt,a4wide,psfig,twoside]{book}
+
+\setlength{\parindent}{0mm}
+
+\setlength{\parskip}{0mm}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{a4wide}
+
+\usepackage{pifont}
+
+\usepackage{epsf}
+
+\usepackage{floatfig, psfig}
+
+\usepackage{fleqn}
+
+\usepackage{norsk}
+
+\usepackage{shadow}
+
+\usepackage{pstricks}
+
+\usepackage{epic}
+
+%\usepackage{epsfig}
+
+\usepackage{theorem}
+
+\usepackage{graphicx}
+
+\usepackage{epic} %drawline
+
+\usepackage{eepic} %arc
+
+\usepackage{rotate}
+
+\usepackage{changebar}
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+\usepackage{multirow}
+
+\usepackage{cite} % [2,3,4] --> [2--4]
+
+
+\setcounter{tocdepth}{2}
+
+\usepackage{maple2e}
+
+\DefineParaStyle{Maple Output}
+
+\DefineParaStyle{Maple Plot}
+
+\DefineCharStyle{2D Math}
+
+\DefineCharStyle{2D Output}
+
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+
+\newcommand{\be}{\begin{equation}}
+
+\newcommand{\ee}{\end{equation}}
+
+\newcommand{\nl}[1]{\line(1,0){10}\raisebox{-0.6ex}{ #1}}
+
+\renewcommand{\rmdefault}{ptm} % Times
+
+
+
+\newcommand{\SC}[1]{{\widetilde{#1}}}
+\newcommand{\FV}[1]{\langle #1 \rangle}
+\newcommand{\enhet}[1]{\: \textrm{#1}}
+
+\newcommand{\mymarkright}[1]{\markright{\thesection\ -- #1}}
+\newcommand{\mymarkboth}[2]{\markboth{#1}{#2}}
+
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+%
+% redefine page style
+%
+\usepackage{fancyhdr}
+% choose pagestyle fancy and define it
+\pagestyle{fancy}
+\fancyhead{} %clear everything
+\fancyfoot{} %clear everything
+\addtolength{\headheight}{1.5pt}
+\addtolength{\headwidth}{2.5\marginparsep}
+\renewcommand{\chaptermark}[1]{\mymarkboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\mymarkright{#1}}
+\fancyfoot[EL,OR]{\bfseries\itshape\thepage}
+\fancyhead[EL]{\nouppercase{\bfseries\itshape\leftmark}}
+\fancyhead[OR]{\nouppercase{\bfseries\itshape\rightmark}}
+\renewcommand{\headrulewidth}{1pt}
+
+% redefine plain page style. used on first pages of chapters et.c.
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[EL,OR]{\bfseries\itshape\thepage}%
+\renewcommand{\headrulewidth}{0pt}
+}
+
+
+%
+% redefine bullet. looks better with an ndash.
+%
+\renewcommand{\labelitemi}{\bfseries--}
+
+%
+% define styles for section and subsection headings
+%
+
+%\font\tenhv  = phvb at 12pt
+%\newcommand{\hvfont}{\fontfamily{phv}\selectfont}
+%\newcommand{\hvfont}{\fontfamily{phv}\fontseries{bc}\selectfont}
+
+\newcommand{\secstyle}{\normalfont\itshape\bfseries\large}
+%\newcommand{\secstyle}{\hvfont\itshape\large}
+\newcommand{\subsecstyle}{\normalfont\itshape\large}
+\newcommand{\paragraphstyle}{\normalfont\itshape}
+
+
+%
+% redefine look of sections, subsections and paragraphs.
+%
+\makeatletter
+\renewcommand{\section}{%
+\@startsection
+  {section}%   the name
+  {1}%         the level
+  {0pt} %{-\Myindent}%       the indent
+  {-2\baselineskip}%   beforeskip
+  {\baselineskip}%    afterskip
+  {\secstyle}}%   style
+\renewcommand{\subsection}{%
+\@startsection
+  {subsection}%   the name
+  {2}%         the level
+  {0pt}%{-\Myindent}%       the indent
+  {-\baselineskip}%   beforeskip
+  {0.5\baselineskip}%    afterskip
+  {\subsecstyle}}%   style
+\renewcommand{\paragraph}{%
+\@startsection
+  {paragraph}%   the name
+  {4}%         the level
+  {0pt}%{-\Myindent}%       the indent
+  {-\baselineskip}%   beforeskip
+  {-1em}%    afterskip
+  {\paragraphstyle}}%   style
+\makeatother
+
+
+
+
+%%
+%% modify margins...
+%%
+\addtolength{\oddsidemargin}{-0.5cm}
+%\addtolength{\evensidemargin}{-0.5cm}
+\addtolength{\textwidth}{0.5cm}
+
+
+
+
+
+
+\begin{document}
+
+\thispagestyle{empty}
+    \vspace*{\stretch{1}}
+    \rule{\linewidth}{1mm}
+    \begin{flushright}
+          \Huge Kvantefysikk\\[5mm]
+          T.~Engeland og M.\ Hjorth-Jensen
+    \end{flushright}
+    \rule{\linewidth}{1mm}
+     \vspace*{\stretch{2}}
+
+\begin{figure}[h]
+\begin{center}
+   \setlength{\unitlength}{1mm}
+   \begin{picture}(100,140)
+   \put(0,0){\epsfxsize=10cm \epsfbox{st20f1.eps}}
+   \end{picture}
+\end{center}
+\end{figure}
+      \begin{center}
+        \Large{Fysisk Institutt, Universitetet i Oslo, 2004}
+      \end{center}
+
+
+\pagenumbering{roman}
+
+\clearemptydoublepage
+
+\pagestyle{fancy}
+
+%  the preface
+
+\section*{Forord}
+
+\input{preface.tex}
+
+\clearemptydoublepage
+
+\tableofcontents
+
+\clearemptydoublepage
+
+\pagenumbering{arabic}
+\part{VEIEN FRAM TIL SCHR\"ODINGERS LIKNING}
+	\input{part_one.tex}
+\clearemptydoublepage
+\part{ENKLE KVANTEMEKANISKE SYSTEMER, FRA PARTIKKEL I BOKS TIL HYDROGENATOMET}
+	\input{part_two.tex}
+\clearemptydoublepage
+\part{ANVENDELSER}
+	\input{part_three.tex}
+\clearemptydoublepage
+\end{document}
+
+

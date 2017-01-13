@@ -1,0 +1,742 @@
+
+
+\chapter{DET PERIODISKE SYSTEMET}
+
+
+
+\section{Introduksjon}
+
+Med utgangspunktet\footnote{Notatene i denne versjonen
+er litt mangelfulle. Emnet dekkes bedre av
+boka, se avsnittene 9-1, 9-2, 9-3, og fra og med 9-5
+til og med 9-9, som er pensum.}  
+i resultatene fra hydrogenatomet, skal
+vi n\aa\ pr\o ve oss p\aa\ forst\aa\ det periodiske 
+systemet utifra kvantemekanikk.
+
+Et av kjennetegnene er at vi har grunnstoffer med liknende
+kjemiske egenskaper men h\o yst ulik verdi p\aa\ kjerneladningen
+$Z$. Eksempler er atomene i edelgasserien, helium ($Z=2$), 
+neon ($Z=10$), argon ($Z=18$),
+krypton ($Z=38$) osv., eller alkalimetallene, 
+med atomer som f.eks.~litium ($Z=3$),
+natrium ($Z=11$), kalium ($Z=19$)osv. Felles for 
+edelgassene er at ionisasjonsenergien, dvs.~energien som trengs
+for \aa\ l\o srive et elektron er stor i forhold
+til f.eks.~alkalimetallene. Figur 5.1 viser ionisasjonsenergien
+som funksjon av  kjerneladningen $Z$ opp til $Z=50$. 
+Det er bla.~denne trenden kvantemekanikken med Schr\"odingers
+likning (SL) var i stand til \aa\ forklare. 
+For \aa\ forst\aa\ det periodiske systemet og dets oppbygging
+skal vi f\o rst g\aa\ til det nest enkleste atomet, helium
+med to elektroner i stedet for ett. 
+I de etterf\o lgende avsnitt skal vi diskutere egenskapene
+til andre elementer.
+\begin{figure}[h]
+\setlength{\unitlength}{1mm}
+   \begin{picture}(100,100)
+   \put(-60,-130){\epsfxsize=25cm \epsfbox{ioni.ps}}
+   \end{picture}
+%\begin{center}
+%\input{ioni.tex}
+%\end{center}
+
+\caption{Ionisasjonsenergi i eV som funksjon av ladningstallet $Z$
+til kjernen.}
+\end{figure}
+
+\section{Heliumatomet}
+
+Heliumatomet best\aa r av to elektroner pluss en kjerne.
+Kjerneladningen er $Z=2$. 
+N\aa r vi skal sette opp den potensielle energien til
+systemet v\aa rt basert p\aa\ Coulombpotensialet,
+m\aa\ vi ogs\aa\ ta hensyn til frast\o tingen mellom
+elektronene.
+
+Vi kaller avstanden mellom elektron 1 og kjernen
+(som vi n\aa\ betrakter som et uendelig tungt massesenter)
+for $r_1$, og avstanden mellom elektron 2 og kjernen for 
+$r_2$ . Bidraget til den potensielle
+energien pga.~tiltrekningen fra kjernen p\aa\ de to elektronene
+blir dermed
+\be
+   -\frac{2ke^2}{r_1}-\frac{2ke^2}{r_2},
+\ee 
+og legger vi til frast\o tingen mellom de to elektronene
+som er i en avstand $r_{12}=|{\bf r}_1-{\bf r}_2|$
+har vi at den potensielle energien $V(r_1, r_2)$ er gitt
+ved
+\be
+ V(r_1, r_2)=-\frac{2ke^2}{r_1}-\frac{2ke^2}{r_2}+
+               \frac{ke^2}{r_{12}},
+\ee
+slik at den totale hamiltonfunksjonen for elektronene i heliumatomet
+kan skrives
+\be
+   \OP{H}=-\frac{\hbar^2\nabla_1^2}{2m}-\frac{\hbar^2\nabla_2^2}{2m}
+          -\frac{2ke^2}{r_1}-\frac{2ke^2}{r_2}+
+               \frac{ke^2}{r_{12}},
+\ee
+og Schr\"odingers likning blir dermed 
+\be
+   \OP{H}\psi=E\psi.
+\ee
+
+Vi ser av uttrykket for den potensielle energien at vi ikke
+lenger har et enkelt sentralsymmetrisk potensial.
+For flere partikler blir det enda mere komplisert.
+
+Dersom vi neglisjerer frast\o tingen mellom
+elektroner, kan vi betrakte systemet som best\aa ende av 
+ikke vekselvirkende elektroner, dvs.~elektronene f\o ler
+kun tiltrekningen fra kjernen og vi kan addere deres bidrag til
+energien. 
+
+For heliumatomet betyr det at den potensielle energien
+blir 
+\be
+    V(r_1, r_2)\approx -\frac{Zke^2}{r_1}-
+                      \frac{Zke^2}{r_2}.
+\ee
+Fordelen med denne tiln\ae rmingen er at hvert elektron 
+kan betraktes som uavhengig av det andre, den s\aa kalte
+uavhengig-elektron model hvor hvert elektron kun ser
+et sentralsymmetrisk potensial, eller sentral felt.
+
+La oss se om det kan gi oss noe meningsfylt.
+F\o rst setter vi $Z=2$ og neglisjerer fullstendig
+frast\o tingen mellom elektronene.
+
+Vi kan n\aa\ bruke resultatene fra hydrogenatomet.
+Elektron 1 har dermed en hamiltonoperator
+\be
+   \OP{h}_1=-\frac{\hbar^2\nabla_1^2}{2m}
+          -\frac{2ke^2}{r_1},
+\ee
+med tilh\o rende egenfunksjon og egenverdilikning
+\be
+   \OP{h}_1\psi_a=E_a\psi_a,
+\ee
+hvor $a=\{ n_al_am_{l_a}\}$, kvantetallene fra hydrogenatomet.
+Energien $E_a$ er dermed
+\be
+   E_a=\frac{Z^2E_0}{n_a^2},
+\ee
+med $E_0=-13.6$ eV, grunntilstanden i hydrogenatomet.
+Helt tilsvarende har vi for elektron 2
+\be
+   \OP{h}_2=-\frac{\hbar^2\nabla_2^2}{2m}
+          -\frac{2ke^2}{r_2},
+\ee
+med tilh\o rende egenfunksjon og egenverdilikning
+\be
+   \OP{h}_2\psi_b=E_b\psi_b,
+\ee
+hvor $b=\{ n_bl_bm_{l_b}\}$, og 
+\be
+   E_b=\frac{Z^2E_0}{n_b^2}.
+\ee
+
+Siden elektronene ikke vekselvirker kan vi anta at
+grunntilstanden til heliumatomet er gitt ved produktet
+\be
+  \psi=\psi_a\psi_b,
+\ee
+slik at approksimasjonen til $\OP{H}$ gir f\o lgende SL
+\be
+   \left(\OP{h}_1+\OP{h}_2\right)\psi=
+    \left(\OP{h}_1+\OP{h}_2\right)
+    \psi_a({\bf r}_1)\psi_b({\bf r}_2)=
+    E_{ab}\psi_a({\bf r}_1)\psi_b({\bf r}_2).
+\ee
+Energien blir dermed
+\be
+    \left(\OP{h}_1\psi_a({\bf r}_1)\right)\psi_b({\bf r}_2) +
+    \left(\OP{h}_2\psi_b({\bf r}_2)\right)\psi_a({\bf r}_1) =
+    \left(E_{a}+E_b\right)\psi_a({\bf r}_1)\psi_b({\bf r}_2),
+\ee
+dvs.
+\be
+   E_{ab}=Z^2E_0\left(\frac{1}{n_a^2}+\frac{1}{n_b^2}\right).
+\ee
+Setter vi inn $Z=2$ og antar at grunntilstanden er gitt ved
+elektronene i laveste en-elektron tilstand med $n_a=n_b=1$
+blir energien
+\be
+    E_{ab}=8E_0=-108.8\hspace{0.1cm} \mathrm{eV},
+\ee
+mens den eksperimentelle verdien er $-78.8$ eV.
+{\bf Vi ser klart at \aa\ kutte det frast\o tende leddet
+pga.~vekselvirkningen mellom elektronene gj\o r at vi
+f\aa r for mye binding.}
+
+Ionisasjonsenergien er gitt ved den energien som kreves for \aa\
+l\o srive et elektron. Energien for \aa\ l\o srive det ene elektronet
+er i den uavhengige-elektron modellen gitt ved
+halve bindingsenergien, dvs.~$54.4$ eV, mens den eksperimentelle
+verdien er $24.59$ eV.
+
+Selv om vi har neglisjert frast\o tingen mellom elektronene, kommer
+fremdeles mesteparten av bidraget til energien fra
+tiltrekningen mellom kjernen og elektronene. 
+La oss derfor gj\o re f\o lgende tankeeksperiment.
+
+Anta at vi skal bygge det periodiske systemet vha.~den uavhengige
+elektronmodellen. Vi antar ogs\aa\ at alle elektronene kan
+plasseres i laveste en-elektron orbital gitt ved
+$n=1$. 
+For et system med $N$ elektroner og $Z$ protoner 
+blir dermed bindingsenergien
+n\aa r vi plasserer alle elektronene i laveste tilstand
+\be
+   E_N=NZ^2E_0.
+\ee
+Selv om den effektive ladningen skulle v\ae re liten, vil
+fremdeles bindingsenergien \o ke som funksjon av elektrontallet
+og ladningen. Ionisasjonsenergien vil v\ae re gitt ved
+\be
+   Z^2E_0,
+\ee
+som  er i strid med de eksperimentelle dataene vist i figur
+5.1.
+
+Hvordan komme ut av dette uf\o ret? Svaret er Paulis prinsipp
+som vi diskuterer i neste avsnitt. 
+
+\section{System av flere elektroner}
+%
+\noindent
+\begin{minipage}{0.45\textwidth}
+%
+Vi skal i det f{\o}lgende gi en kort oversikt over
+hvordan vi bestemmer elektron konfigurasjonen
+og de karakteristiske egenskaper for
+grunntilstanden (tilstanden med st{\o}rst bindingsenergi)
+i et atom innenfor det som heter {\bf sentralfelt  modellen}.
+
+\hspace*{0.5cm}  Et atom karakteriseres ved et atomnummer Z.
+Det angir samtidig antall elektroner i systemet.  I sentralfelt modellen
+antar vi at den elektriske tiltrekningen mellom elektronene og
+den indre atomkjernen samt  frast{\o}tningen elektronene imellom
+gir opphav til et modifisert Coulombfelt. I dette feltet
+beveger elektronene seg tiln{\ae}rmet uavhengig av hverandre
+p{\aa} tilsvarende m{\aa}te som det ene elektronet i hydrog\'{e}n
+atomet. Hvert enkelt elektron er karakterisert ved et sett kvantetall
+$n, l,m_l, m_s$ med samme fysiske betydningen
+som i hydrog\'{e}n atomet.
+
+%
+\end{minipage}
+%
+\hspace{0.05\textwidth}
+%
+\begin{minipage}{0.50\textwidth}
+%
+\begin{center}
+\setlength{\unitlength}{1.0mm}
+\begin{picture}(50,85)(0,-15)
+\thicklines
+%1s
+\put(0,0){K}
+\put(10,0){1s}
+\put(20,0){\line(1,0){10}}
+\put(35,0){2}
+\put(45,0){2}
+%2s2p
+\put(0,12.5){L}
+\put(10,10){2s}
+\put(20,10){\line(1,0){10}}
+\put(35,10){2}
+\put(10,15){2p}
+\put(20,15){\line(1,0){10}}
+\put(35,15){6}
+\put(45,15){10}
+%3s3p
+\put(0,27.5){M}
+\put(10,25){3s}
+\put(20,25){\line(1,0){10}}
+\put(35,25){2}
+\put(10,30){3p}
+\put(20,30){\line(1,0){10}}
+\put(35,30){6}
+\put(45,30){18}
+
+%4s3d4p
+\put(0,45){N}
+\put(10,40){4s}
+\put(20,40){\line(1,0){10}}
+\put(35,40){2}
+\put(10,45){3d}
+\put(20,45){\line(1,0){10}}
+\put(35,45){10}
+\put(10,50){4p}
+\put(20,50){\line(1,0){10}}
+\put(35,50){6}
+\put(45,50){36}
+%5s4d5p
+\put(0,65){O}
+\put(10,60){5s}
+\put(20,60){\line(1,0){10}}
+\put(35,60){2}
+\put(10,65){3d}
+\put(20,65){\line(1,0){10}}
+\put(35,65){10}
+\put(10,70){4p}
+\put(20,70){\line(1,0){10}}
+\put(35,70){6}
+\put(45,70){54}
+\put(0,-10){Skall}
+\put(10,-10){Niv\aa\ }
+\put(35,-10){$N_{e^-}$}
+\put(45,-10){$\sum e^-$}
+\end{picture}
+\end{center}
+%\end{center}
+\end{minipage}
+%
+\vspace{0.1mm}
+
+De mulige elektrontilstandene i et atom ut fra sentralfelt modellen
+er vist i figur~5.2. Der vises
+spektroskopisk notasjon, maksimalt  antall elektroner
+($N_{e^-}$) i et skall og totalt antall elektroner opp til og med 
+et gitt skall, ($\sum e^-$).
+Vi har i figuren  en vertikal skala som angir energiforskjellen mellom
+tilstandene karakterisert med kvantetallene  $(nl) $, og med 
+$ (nl) = 1s$ som den laveste -  den sterkest
+bundne tilstand.  Rekkef{\o}lgen av elektron tilstandene er noe
+forskjellig fra det vi hadde for hydrog\'{e}n atomet
+og skyldes at elektron frast{\o}tninger er inkludert.
+Det vil v{\ae}re n{\o}dvendig med visse sm{\aa} modifikasjoner
+i rekkef{\o}lgen for enkelte atomer, men i alminnelighet vil elektron
+tilstandene v{\ae}re som vist p{\aa} figuren.
+
+Legg merke til visse energi gap, omr{\aa}der hvor
+avstanden  mellom to nabo tilstander er klart st{\o}rre enn gjennomsnittet.
+Dette gir opphav til en skallstruktur
+i atomene. Energi gap finner vi mellom $1s$ og $2s$, mellom $2p$
+og $3s$ og mellom $3p$ og $4s$ osv. Energi tilstandene  mellom
+to energi gap danner et {\sl \bf skall}. Hvert sett av $nl$
+tilstander innen et skall kalles et {\bf \sl underskall}.
+Antall elektroner som et underskall if{\o}lge
+Pauliprinsippet kan inneholde, er vist p{\aa} figuren i kolonnen
+$N_{e^-}$. Det er ogs{\aa} summert opp for hele skallet.
+
+He atomet har 2 elektroner og fyller opp det innerste
+$1s$ skallet. Den relativt store avstand til de neste
+elektron tilstandene forklarer at He  er et spesielt  stabilt
+grunnstoff. Samme fenomen opptrer ved de andre energi
+gapene - Ne ved $Z = 10$, Ar ved $Z = 18$ osv..
+
+Egenskapene til de forskjellige atomene er bestemt av elektron
+konfigurasjonen og de {\bf \sl spektroskopiske kvantetallene}.
+Vi skal n{\aa} definere hva det er og sette opp regler til {\aa} bestemme
+dem for det enkelte atom.
+
+La oss starte med et system av to elektroner.  Hvert
+elektron har et banespinn $\vec{l}$ med tilh{\o}rende kvantetall $l$
+og $m_l$.
+For to-elektron systemet har vi et total banespinn,
+gitt ved
+%
+\begin{equation}
+\vec{L} = \vec{l_1} + \vec{l_2}.
+\label{b1}
+\end{equation}
+%
+Det tilh{\o}rende kvantetallet $L$ er bestemt ut fra regelen
+%
+\begin{equation}
+L = |l_1 - l_2|, |l_1 - l_2|+1, |l_1 - l_2| +2,\ldots ,l_1 + l_2,
+\label{b2}
+\end{equation}
+%
+og med $M_L = -L,\ldots ,+L$ 
+Legg merke til at dette er  samme regel som ble brukt til {\aa}
+sette sammen $\vec{L}$ og $\vec{S}$ til $\vec{J}$ i forbindelse
+med spinn-bane koblingen  i hydrog\'{e}n atomet.\\[2ex]
+%
+{\sl Eksempel:} For $l_1 = 1$ og $l_2 = 2$, f{\aa}r vi fra regelen
+ovenfor $L = 1, 2, 3$.
+Videre har hvert elektron et egenspinn $\vec{s}$ med kvantetall $s = 1/2$.
+Dette gir et totalt egenspinn
+%
+\begin{equation}
+\vec{S} = \vec{s}_1 + \vec{s}_2,
+\label{b3}
+\end{equation}
+%
+for to-elektron systemet med kvantetall $ S = 0$ eller $1$
+etter samme regel som i lign.~(\ref{b2}).
+For He med begge elektronene i $(n,l) = (1,0)$ betyr dette
+at $l_1 = l_2 = 0$, og lign.~(\ref{b2}) gir $L = 0$.
+For egenspinnet har vi derimot to muligheter, $S = 0$ eller $S = 1$.
+Hvilken skal vi velge?  Her kommer Pauliprinsippet til hjelp og krever
+at den totale b{\o}lgefunksjonen m{\aa} v{\ae}re antisymmetrisk. La oss se
+n{\ae}rmere p{\aa} hva dette betyr.
+
+B{\o}lgefunksjonen for ett elektron kan skrives som $\psi_{l,m_l,,m_s}$.
+Kvantetallet $m_s$ har verdiene $\pm 1/2$. En alternativ  skrivem{\aa}te for
+$m_s = + 1/2$ er $+$ og for $m_s = - 1/2$ $-$. 
+Den totale b{\o}lgefunksjonen for to elektroner i He f{\aa}r formen
+%
+\begin{equation}
+\psi(1, 2) = \sqrt{\frac{1}{2}}
+	 \left (\psi_{1, 0, 0, +}(1) \psi_{1, 0, 0, -}(2)
+			- \psi_{1, 0, 0, +}(2) \psi_{1, 0, 0, -}(1) \right ).
+\label{b4}
+\end{equation}
+%
+Romdelen av b{\o}lgefunksjonen for de to elektronene er symmetrisk,
+mens egenspinndelen er antisymmetrisk. Det ser vi ved {\aa} omforme lign.~(\ref{b4})
+til
+%
+\begin{equation}
+\psi(1, 2) = \psi_{1, 0, 0}(1) \psi_{1, 0, 0}(2)
+	         \sqrt{\frac{1}{2}} \left (| +, - > - | -, + > \right ).
+\label{b5}
+\end{equation}
+For egenspinnet bruker vi betegnelsen $ | +, - >$ til {\aa} angi
+at elektron nr.~1 har $m_s = + 1 / 2 $ (opp), og elektron nr.~2
+har $m_s = - 1 / 2$ (ned). I tilstanden $ | -, + >$ er de byttet om.
+Symmetri egenskapen til b{\o}lgefunksjonen $\psi( 1, 2 )$ kan vi
+formulere slik
+%
+\begin{equation}
+\psi( 1, 2 ) = \left ( \begin{array}{c}
+					  romtilstand\\
+					  symmetrisk
+					  \end{array}
+					  \right )
+					  \times
+					  \left ( \begin{array}{c}
+					  spinntilstand\\
+					  antisymmetrisk
+					  \end{array}
+					  \right ),
+\label{b6}
+\end{equation}
+%
+og den totale b{\o}lgefunksjonen er antisymmetrisk og tilfredsstiller
+Pauliprinsippet.
+%
+
+To-elektron b{\o}lgefunksjonen for He i lign.~(\ref{b5}) tilfredsstiller
+Pauliprinsippet og har totalt banespinn $ L = 0$. Neste sp{\o}rsm{\aa}l
+blir da hvilket totalt egenspinn $S$  tilstanden har.
+Her skal vi oppgi svaret uten {\aa} g{\aa} inn p{\aa} detaljene.
+De er ikke vanskelige, men krever litt tid.
+
+For en to-elektron egenspinn funksjon har vi
+%
+\begin{equation}
+\chi_{S = 0}(1,2) = 	\sqrt{\frac{1}{2}} \left (| +, - > - | -, + > \right ).
+\label{b7}
+\end{equation}
+%
+Denne tilstanden har $S = 0$ og er antisymmetrisk. Det siste er lett
+{\aa} se av formen. En annen mulighet er en egenspinn tilstand med
+$S = 1$. Denne kommer i tre varianter avhengig av $M_S$.
+%
+\begin{equation}
+\chi_{S = 1}(1,2) = \left \{
+	\begin{array}{rll}
+	&|+, + >           &M_S = +1\\
+	\sqrt{\frac{1}{2}} & \left (| +, - > + | -, + > \right ).
+							&M_S = \;\; 0\\
+	&| -, - >          &M_S = -1
+	\end{array}
+	\right .
+\label{b8}
+\end{equation}
+%
+Disse tre tilstandene har $S = 1$ og er alle symmetriske,
+hvilket ogs{\aa} tydelig fremg{\aa}r av formen.
+Egenspinn tilstanden i lign.~(\ref{b7}) brukes i b{\o}lgefunksjonen i lign.~(\ref{b5}).
+Men vi har ogs{\aa} situasjoner hvor romfunksjonen kan v{\ae}re antisymmetrisk.
+Da bruker vi egenspinn funksjonen i lign.~(\ref{b8}).
+
+For He atomet betyr dette at grunntilstanden har $L = 0$ og $S = 0$.
+Men vi trenger ett kvantetall
+til, det totale spinn som  i hydrog\'{e}n ble betegnet med
+$J$. Den generelle definisjonen er
+%
+\begin{equation}
+\vec{J} = \vec{L} + \vec{S}.
+\label{b9}
+\end{equation}
+%
+I tilfelle He betyr dette $J = 0$.
+
+Et samlet symbol for disse kvantetallene er
+%
+\begin{equation}
+^{2 S + 1}L_J,
+\label{b10}
+\end{equation}
+%
+og vi f{\aa}r for He: $^{2 S + 1}L_J$ = $ ^{1}S_0$.
+
+La oss n{\aa} anvende denne teorien til {\aa} lage en eksitert tilstand
+i He, dvs. en tilstand som har h{\o}yere energi - mindre
+bindingsenergi enn He i grunntilstanden. Dette kan vi gj{\o}re
+ved {\aa} flytte ett av elektronene fra $1s$ til
+$2s$ tilstanden. B{\o}lgefunksjonen f{\aa} da formen
+%
+\begin{equation}
+\psi(1, 2) = \sqrt{\frac{1}{2}}
+\left ( R_{1s}(1) R_{2s}(2) + R_{1s}(2) R_{2s}(1) \right )
+\chi_{S = 0}(1,2).
+\label{b11}
+\end{equation}
+%
+Romdelen av b{\o}lgefunksjonen er symmetrisk og egenspinndelen
+er antisymmetrisk med $ S = 0$, se  lign.~(\ref{b7}). Spektroskopisk
+betegnelse blir $^{1}S_0$. En annen mulighet er
+ %
+\begin{equation}
+\psi(1, 2) = \sqrt{\frac{1}{2}}
+\left ( R_{1s}(1) R_{2s}(2) - R_{1s}(2) R_{2s}(1) \right )
+\chi_{S = 1}(1,2),
+\label{b12}
+\end{equation}
+%
+hvor romdelen er antisymmetrisk og egenspinndelen symmetrisk
+med $S = 1$. Det gir spektroskopisk betegnelse
+$^{3}S_1$. Eksperimentelt har He-tilstanden i lign.~(\ref{b12}) med $S = 1$
+st{\o}rre bindingsenergi enn tilstanden i lign.~(\ref{b11}) med $S = 0$.
+Dette kan forklares ved at i den antisymmetriske romdel av
+b{\o}lgefunksjonen i lign.~(\ref{b12}) har de to elektronene i middel
+st{\o}rre avstand enn i tilstand (\ref{b11}). Derved blir elektron
+frast{\o}tningen mindre.
+Legg merke til at for en symmetrisk romfunksjon kan de to elektronene
+v{\ae}re p{\aa} samme sted i rommet, mens for den antisymmetriske
+romfunksjonen er sannsynligheten for dette lik null.
+%
+\begin{figure}
+%
+\begin{center}
+%
+\begin{pspicture}(10,6)
+
+%%%%%%%%%%
+
+%%%     linje 1   %%%
+
+\rput(0,4.5){
+             \rput(0,0){
+                \psframe(0,0)(0.5,0.5)
+              }
+              \multiput(0,0.5)(0.5,0){4}{ 
+                 \psframe(0,0)(0.5,0.5)
+              }
+              \rput(0.2,1.1){s}
+              \rput(1.2,1.1){p}
+              \rput(-0.3,.2){K}
+              \rput(-0.3,.7){L}
+              \rput(1.2,.2){H}
+
+              \psline{->}(0.25,0.05)(0.25,0.45)
+
+} %%* end rput linje 1
+
+%%%  linje 2   %%%
+
+\rput(0,3){
+          \multiput(0,0)(2.5,0){2}  {
+             \rput(0,0){
+                \psframe(0,0)(0.5,0.5)   
+                 \psline{->}(0.15,0.05)(0.15,0.45)
+                 \psline{<-}(0.35,0.05)(0.35,0.45)
+
+                \rput(0.2,1.1){s}
+                \rput(1.2,1.1){p}
+             }
+             \multiput(0,0.5)(0.5,0){4}{ 
+                 \psframe(0,0)(0.5,0.5)
+             }
+          }
+          \rput(-0.3,.2){K}
+          \rput(-0.3,.7){L}
+          \rput(1.2,.2){He}
+          \rput(3.7,.2){Li}
+          \psline{->}(2.75,0.55)(2.75,0.95)
+
+}  %* end rput linje 2
+
+%%%   linje 3  %%%%
+
+\rput(0,1.5)  {
+             \multiput(0,0)(2.5,0){4}  {
+%%%%%%%%%%
+                \rput(0,0){
+                   \psframe(0,0)(0.5,0.5)
+                   \psline{->}(0.15,0.05)(0.15,0.45)
+                   \psline{<-}(0.35,0.05)(0.35,0.45) 
+                }  
+                \multiput(0,0.5)(0.5,0){4}  {
+                   \psframe(0,0)(0.5,0.5)
+                }
+                \rput(0.2,1.1){s}
+                \rput(1.2,1.1){p}
+                \psline{->}(0.15,0.55)(0.15,0.95)
+                \psline{<-}(0.35,0.55)(0.35,0.95)
+             }
+             \rput(-0.3,0.2){K}  
+             \rput(-0.3,0.7){L}
+             \rput(1.2,0.2){Be}     
+             \rput(3.7,0.2){B}   
+             \rput(6.2,0.2){C}
+             \rput(8.7,0.2){N}
+             \multiput(2.5,0.55)(2.5,0){3} {
+               \psline{->}(0.75,0.05)(0.75,0.45)
+             }
+             \multiput(5,0.55)(2.5,0){2} {
+                 \psline{->}(1.25,0.05)(1.25,0.45)
+              }
+              \psline{->}(9.25,0.55)(9.25,0.95)
+
+}    %% end linje 3 
+
+%%%   linje 4   %%%
+\rput(0,0)  {
+             \multiput(0,0)(2.5,0){3} {
+%%%%%%%%%%
+                \rput(0,0){
+                   \psframe(0,0)(0.5,0.5)
+                   \psline{->}(0.15,0.05)(0.15,0.45)
+                   \psline{<-}(0.35,0.05)(0.35,0.45)
+                }
+                \multiput(0,0.5)(0.5,0){4}  {
+                   \psframe(0,0)(0.5,0.5)
+                }
+                \psline{->}(0.15,0.55)(0.15,0.95)
+                \psline{<-}(0.35,0.55)(0.35,0.95)
+                \psline{->}(0.65,0.55)(0.65,0.95)
+                \psline{<-}(0.85,0.55)(0.85,0.95)
+
+                \rput(0.2,1.1){s}
+                \rput(1.2,1.1){p}
+             }
+
+             \psline{->}(1.25,0.55)(1.25,0.95)
+             \psline{->}(1.75,0.55)(1.75,0.95)
+
+             \multiput(2.5,0.55)(2.5,0){2}  {
+                \psline{->}(1.15,0)(1.15,0.45)
+                \psline{<-}(1.35,0)(1.35,0.45)
+             }
+             \psline{->}(4.25,0.55)(4.25,0.95)
+             \psline{->}(6.65,0.55)(6.65,0.95)
+             \psline{<-}(6.85,0.55)(6.85,0.95)
+
+             \rput(-0.3,0.2){K}
+             \rput(-0.3,0.7){L}
+             \rput(1.2,0.2){O}
+             \rput(3.7,0.2){F}
+             \rput(6.2,0.2){Ne}
+ }   %% end linje 4 
+
+
+
+
+\end{pspicture}
+%
+\end{center}
+\caption{Elektron konfigurasjonene for de 10 f{\o}rste grunnstoffene.}
+\label{elek}
+\end{figure}
+%
+
+Vi skal n{\aa} bruke teorien p{\aa} systemer med flere elektroner. Med
+utgangspunkt i de regler vi hittil har presentert kan vi sette opp
+elektron konfigurasjonen til de 10 f{\o}rste grunnstoffene.
+Dette er vist i figur~\ref{elek}.
+Symbolet $\uparrow \downarrow$ i figuren betyr at de to elektronene
+er i en antisymmetrisk spinn tilstand med $S = 0$.
+For de fem f{\o}rste grunnstoffen er
+de spektroskopiske kvantetallene:
+%
+\begin{center}
+H: $^2S_{1/2}$\hspace{0.5cm} He: $^1S_0$\hspace{0.5cm} Li: $^2S_{1/2}$
+\hspace{0.5cm} Be: $^1S_0$\hspace{0.5cm} B: $^2P_J,
+J = 1/2 \;\;eller\;\; 3/2$
+\end{center}
+%
+St{\o}rre problemer blir det med de fem siste grunnstoffene.
+Her trenger vi noen flere regler:
+%
+\begin{enumerate}
+%
+\item Hvis alle tilstandene i et underskall inneholder elektroner,
+$(nl)^{2 (2 l + 1)}$, danner  det et {\sl lukket skall}.
+En slik konfigurasjon har totalt $L = 0$ og $S = 0$.\\
+Eksempel: Underskallet $2p$ i Ne inneholder
+$2 \cdot (2 \cdot 1 + 1 ) = 6$ elektroner if{\o}lge figur~\ref{elek}.
+Dette er det maksimalt tillatte  antall etter
+Pauliprinsippet, og  konfigurasjonen har $L = S = 0$.
+Det samme argumentet kan vi bruke p{\aa} skallet $1s$
+og underskallet $2s$. Til sammen vil derfor de 10 elektronene i Ne
+ha $L = S = J = 0$, dvs. $^1S_0$.
+%
+\item Grunnstoffet N har if{\o}lge figur~\ref{elek} 3 elektroner i $2p$
+og spinnfunksjonen er $|+, +, +>$. Alle spinnvektorene er rettet
+samme vei, og vi f{\aa}r $M_S = 1/2 + 1/2 + 1/2 = 3/2$ med $S = 3/2$
+siden $ S \geq M_S$. Dette er et eksempel p{\aa}
+{\sl \bf Hunds regel}: {\sl Elektronene fyller et underskall slik at
+$S$ blir st{\o}rst mulig n{\aa}r vi tar hensyn til at
+Pauliprinsippet skal v{\ae}re oppfylt.}
+Forklaringen er f{\o}lgende:
+Vi vet fra He atomet at vi f{\aa}r st{\o}rst
+bindingsenergi  ved {\aa} minimalisere  elektron
+frast{\o}tningen. Det oppn{\aa}r vi ved {\aa} antisymmetrisere
+romdel av b{\o}lgefunksjonen, og etter Pauliprinsippet
+betyr det {\aa} gj{\o}re  spinnfunksjonen mest mulig symmetrisk.
+Dette er Hund's regel og vi ser den anvendt i figur~\ref{elek} b{\aa}de
+for  C, $Z = 6$, N, $Z = 7$, O, $Z=8$ og F, $Z = 9$.
+%
+\item En regel til er viktig og kommer til anvendelse i tilfelle
+F med $Z = 9$. Fra figur~\ref{elek} ser vi at $2p$ underskallet
+inneholder 5 elektroner. Adderer vi til ett elektron, f{\aa}r
+vi et lukket $2p$ underskall. Det gir $L = S = 0$.
+Vi kan da skrive
+%
+\begin{equation}
+\vec{L} = \vec{L}_1 + \vec{l},
+\label{b13}
+\end{equation}
+%
+hvor $L$ er banespinnet for $2p^6$, $L_1$ er banespinnet
+for $2p^5$ og $l$ er banespinnet for et elektron i $2p$
+skallet. De tilh{\o}rende kvantetallene blir $L = 0$, $l = 1$
+og $L_1$. Bruker vi regelen i lign.~(\ref{b2}), f{\aa}r vi som eneste
+mulighet $L_1 = 1$. Tilsvarende analyse kan vi gjennomf{\o}re
+for egenspinnet med svar $S_1 = 1/2$.\\
+Konklusjon: Har vi et underskall $nl$,
+vil elektron konfigurasjonen
+$(nl)^{2 (2 l + 1) - 1}$ ha samme banespinn og egenspinn som et enkelt
+elektron i samme underskall.\\
+Denne symmetrien betyr at $F, Z = 9$ og $B, Z = 5$ har samme
+spektroskopiske kvantetall - $^2P_J$ med mulighetene
+$J = 1/2 \;\;eller\;\; 3/2$.
+%
+\end{enumerate}
+%
+For en fullstendig beskrivelse av de 10 f{\o}rste grunnstoffene
+i figur~\ref{elek} trenges enn{\aa} litt mer teori. Vi f{\aa}r ikke fastlagt
+banespinnet for C, N og O n{\o}yaktig. Men det vil vi overlate til
+videre studium i kvantefysikken. Vi kan likevel bruke teorien v{\aa}r
+til {\aa} gi en god beskrivelse av mange grunnstoffer
+i det periodiske system, ikke bare de som er angitt i figur~\ref{elek}.
+
+\section{Zeeman effekten for atomer}
+Se avsnitt 8-11 i boka. Erstatt det  
+totale spinn for en tilstand
+i hydrogenatomet med det tilsvarende
+totale spinn for det aktuelle atomet. Se ogs\aa\ oppgave 3.8 for en anvendelse
+
+
+\section{Lasere}
+
+

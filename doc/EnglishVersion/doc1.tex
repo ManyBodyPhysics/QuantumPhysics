@@ -1,0 +1,72 @@
+%% Created by Maple V Release 5 (IBM INTEL LINUX)
+%% Source Worksheet: Untitled (1)
+%% Generated: Mon Feb 22 14:33:14 1999
+\documentclass{article}
+\usepackage{maple2e}
+\DefineParaStyle{Maple Output}
+\DefineParaStyle{Maple Plot}
+\DefineCharStyle{2D Math}
+\DefineCharStyle{2D Output}
+\begin{document}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{beta:=2*938/197;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\beta  := {\displaystyle \frac {1876}{197}} 
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=2;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+a := 2
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{v0:=100/2/938;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\mathit{v0} := {\displaystyle \frac {25}{469}} 
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(\{tan(beta*a*sqrt(v0-x)),-sqrt((v0-x)/x)
+\},x=0.001..0.045);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{center}
+\mapleplot{doc101.eps}
+\end{center}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\end{mapleinput}
+
+\end{maplegroup}
+\end{document}
+%% End of Maple V Output

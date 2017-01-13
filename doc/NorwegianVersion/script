@@ -1,0 +1,25 @@
+#local/bin/sh
+# script for book generation.
+# Examples of use: 
+#
+#  man -t  | book4 | lpr -P
+#      This will print the man pages in book format and
+#      both sides. If you need file out, say:
+#  man -t  | book4 > out.ps
+#  cat name.ps | book4 > name2.ps    #  ps-file to book-format
+#  book4 name.ps | lpr               #  same
+
+#PATH=/usr/local/bin:/usr/bin:/bin
+#export PATH
+
+PSBOOK=/usr/bin/psbook
+PSNUP=/usr/bin/psnup
+PSTOPS=/usr/bin/pstops
+
+if test $# -gt 0; then
+   for N in $*; do
+      $PSBOOK -q $N | $PSNUP -q -2 | $PSTOPS -q "2:0,1U(1w,1h)"
+   done
+else
+   $PSBOOK -q | $PSNUP -q -2 | $PSTOPS -q "2:0,1U(1w,1h)"
+fi

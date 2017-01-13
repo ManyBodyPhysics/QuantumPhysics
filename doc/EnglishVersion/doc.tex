@@ -1,0 +1,58 @@
+%% Created by Maple V Release 5 (IBM INTEL LINUX)
+%% Source Worksheet: Untitled (1)
+%% Generated: Mon Feb 22 12:38:01 1999
+\documentclass{article}
+\usepackage{maple2e}
+\DefineParaStyle{Maple Output}
+\DefineParaStyle{Maple Plot}
+\DefineCharStyle{2D Math}
+\DefineCharStyle{2D Output}
+\begin{document}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{beta:=1.5;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\beta  := 1.5
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{alpha:=beta*100;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\alpha  := 150.0
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(
+\{sin(sqrt(alpha-x*beta)),-sqrt((alpha-x*beta)/alpha)\},x=0..100);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{center}
+\mapleplot{doc01.eps}
+\end{center}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\end{mapleinput}
+
+\end{maplegroup}
+\end{document}
+%% End of Maple V Output

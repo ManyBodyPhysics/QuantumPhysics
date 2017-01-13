@@ -1,0 +1,209 @@
+\documentclass{article}
+\usepackage{maple2e}
+\usepackage{a4wide}
+\DefineParaStyle{Maple Output}
+\DefineParaStyle{Maple Plot}
+\DefineCharStyle{2D Math}
+\DefineCharStyle{2D Output}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{eqnarray}}
+\newcommand{\ea}{\end{eqnarray}} 
+
+\begin{document}
+
+\section*{Et lite notat om  oppgavene 2.2 og 2.4}
+
+\input{opp1}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{beta:=2*938/197;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\beta  := {\displaystyle \frac {1876}{197}} 
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{a:=2;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+a := 2
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{\xi_0:=100/2/938;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\mathit{\xi_0} := {\displaystyle \frac {25}{469}} 
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{plot(\{tan(beta*a*sqrt(xi_0-xi)),-sqrt((xi_0-xi)/xi)
+\},xi=0.001..0.045);}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{center}
+\mapleplot{doc201.eps}
+\end{center}
+
+\end{maplegroup}
+Plottet forteller oss at l\o sningen ligger n\ae r $\xi=0.03$.
+Den grafiske l\o sningen gir oss kun en pekepinn p\aa\ st\o rrelsen
+til $\xi$. \O nsker vi et mere presist svar m\aa\ vi ty til numerisk
+innsats. Det finnes et vell av metoder for \aa\ finne nullpunktet
+av 
+\[
+   tan(a\beta\sqrt{\xi_0-\xi})\pm\sqrt{\frac{\xi_0-\xi}{\xi}}=0.
+\]
+Vi velger Newton sin metode og lager en prosedyre i Maple.
+Newtons metode kan beskrives som f\o lger
+\begin{itemize}
+\item Vi finner f\o rst et punkt p\aa\ x-aksen som vi antar 
+er n\ae r l\o sningen, jfr.\ den grafiske l\o sningen ovenfor.
+\item Vi finner krumningen til kurven i dette punktet.
+\item Vi trekker tangenten ved dette punktet og ser hvr 
+tangenten treffer x-aksen. Det sistnevnte gir oss en ny x verdi som
+er n\ae rmere l\o sningen. Det nye punktet $x_1$ kan vi s\aa\ bruke
+til \aa\ bestemme et nytt punkt.
+\item Slik kan en fortsette til en finner den numeriske verdien
+for $x$ hvor den ovennevnte likning blir null.
+\item Matematisk kan vi uttrykke denne iterasjons prosessen som
+     \[
+        x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)},
+     \]
+hvor $f$ er selve funksjonen, i v\aa rt tilfelle
+\[
+   tan(a\beta\sqrt{\xi_0-\xi})\pm\sqrt{\frac{\xi_0-\xi}{\xi}}
+\]
+\end{itemize}
+I Maple kan vi skrive dette som 
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{MakeIteration:= proc(expr::algebraic,
+x::name)}{%
+}
+\end{mapleinput}
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{    local iteration;}{%
+}
+\end{mapleinput}
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{    iteration:=x-expr/diff(expr,x);}{%
+}
+\end{mapleinput}
+
+\begin{mapleinput}
+\mapleinline{active}{1d}{    unapply(iteration, x);}{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+Uttrykket {\it expr} er selve funksjonen v\aa r 
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{expr:=tan(beta*a*sqrt(xi_0-xi))+sqrt((xi_0-xi)/xi);}
+{%
+}
+\end{mapleinput}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{Newton:=MakeIteration(expr, xi);}{%
+}
+\end{mapleinput}
+\end{maplegroup}
+Fra grafen finner vi en startverdi for iterasjonen {\it guess}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{guess:=0.03;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\mathit{guess} := .03
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{to 1. do guess:=Newton(guess); od;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\mathit{guess} := .03645979678
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\mapleinline{active}{1d}{answer:=guess*2*938;}{%
+}
+\end{mapleinput}
+
+\mapleresult
+\begin{maplelatex}
+\[
+\mathit{answer} := 68.39857876
+\]
+\end{maplelatex}
+
+\end{maplegroup}
+\begin{maplegroup}
+\begin{mapleinput}
+\end{mapleinput}
+
+\end{maplegroup}
+Vi f\aa r alts\aa\ en bindingsenergi p\aa\ $68$ MeV, som er mye
+mere enn den eksperimentelle til deuterium.
+Velger vi $V_0=30$ MeV f\aa r vi $6$ MeV, vi n\ae rmer oss!
+Selv om vi har valgt et enkelt kasse potensial, kan vi vha.\
+av kun massen til protonet og en antagelse om rekkevidden
+finne realistiske verdier for bindingsnergien.
+Rekkevidden til vekselvirkningen mellom proton og n\o ytroner 
+er typisk noen f\aa\ fm, og verdien p\aa\ $V_0 \approx 50 $ MeV
+er heller ikke s\aa\ urealistisk.
+
+Vi legger ogs\aa\ merke til at n\aa r styrken til potensialet blir 
+mindre, s\aa\ blir bindingsenergien ogs\aa\ mindre.
+Hvorfor er ikke bindingsenergien lik styrken p\aa\ potensialet?
+
+S\aa\ en ny utfordring. Vi fant ovenfor b\o lgefunksjonen til systemet
+v\aa rt. Med den gitte bindingsenergien for $V_0=100$ og $V_0=30$ MeV
+pr\o v \aa\ plotte i Maple selve b\o lgefunksjonen n\aa r $E<0$.
+\input{opp2}
+\input{opp3}
+\end{document}
+%% End of Maple V Output

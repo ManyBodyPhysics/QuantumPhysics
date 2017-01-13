@@ -1,0 +1,131 @@
+
+%  last update : 10/jan/2004  mhj
+
+
+\documentclass[11pt,a4wide,psfig,twoside]{book}
+
+\setlength{\parindent}{0mm}
+
+\setlength{\parskip}{0mm}
+
+\usepackage[T1]{fontenc}
+
+\usepackage{a4wide}
+
+\usepackage{pifont}
+
+\usepackage{epsf}
+
+\usepackage{floatfig, psfig}
+
+\usepackage{fleqn}
+
+\usepackage{norsk}
+
+\usepackage{shadow}
+
+\usepackage{pstricks}
+
+\usepackage{epic}
+
+%\usepackage{epsfig}
+
+\setcounter{tocdepth}{2}
+
+\usepackage{maple2e}
+
+\DefineParaStyle{Maple Output}
+
+\DefineParaStyle{Maple Plot}
+
+\DefineCharStyle{2D Math}
+
+\DefineCharStyle{2D Output}
+
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+
+\newcommand{\be}{\begin{equation}}
+
+\newcommand{\ee}{\end{equation}}
+
+\newcommand{\nl}[1]{\line(1,0){10}\raisebox{-0.6ex}{ #1}}
+
+\renewcommand{\rmdefault}{ptm} % Times
+
+\usepackage{fancyheadings}
+
+\addtolength{\headwidth}{\marginparsep}
+
+\addtolength{\headwidth}{\marginparwidth}
+
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+\renewcommand{\chaptermark}[1]%
+            {\markboth{#1}{}}
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+      {\fancyplain{}{\bfseries\rightmark}}
+
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+      {\fancyplain{}{\bfseries\thepage}}
+
+\cfoot{}
+
+\begin{document}
+
+\thispagestyle{empty}
+    \vspace*{\stretch{1}}
+    \rule{\linewidth}{1mm}
+    \begin{flushright}
+          \Huge Kvantefysikk\\[5mm]
+          T.~Engeland og M.\ Hjorth-Jensen
+    \end{flushright}
+    \rule{\linewidth}{1mm}
+     \vspace*{\stretch{2}}
+
+\begin{figure}[h]
+\begin{center}
+   \setlength{\unitlength}{1mm}
+   \begin{picture}(100,140)
+   \put(0,0){\epsfxsize=10cm \epsfbox{st20f1.eps}}
+   \end{picture}
+\end{center}
+\end{figure}
+      \begin{center}
+        \Large{Fysisk Institutt, Universitetet i Oslo, 2004}
+      \end{center}
+
+
+\pagenumbering{roman}
+
+\clearemptydoublepage
+
+\pagestyle{fancy}
+
+%  the preface
+
+\section*{Forord}
+
+\input{preface.tex}
+
+\clearemptydoublepage
+
+\tableofcontents
+
+\clearemptydoublepage
+
+\pagenumbering{arabic}
+\part{VEIEN FRAM TIL SCHR\"ODINGERS LIKNING}
+	\input{part_one.tex}
+\clearemptydoublepage
+\part{ENKLE KVANTEMEKANISKE SYSTEMER, FRA PARTIKKEL I BOKS TIL HYDROGENATOMET}
+	\input{part_two.tex}
+\clearemptydoublepage
+\part{ANVENDELSER}
+	\input{part_three.tex}
+\clearemptydoublepage
+\end{document}
+
+

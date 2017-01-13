@@ -1,0 +1,260 @@
+\documentclass[twoside,a4paper,10pt]{report}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim}
+%\usepackage{bibtex}
+\usepackage{theorem}
+\usepackage{graphicx}
+\usepackage{epic} %drawline
+\usepackage{eepic} %arc
+\usepackage{rotate}
+%\usepackage{hvfloat}
+%\usepackage{a4wide}
+\usepackage{a4}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{cite} % [2,3,4] --> [2--4]
+
+\newcommand{\mymarkright}[1]{\markright{\thesection\ -- #1}}
+\newcommand{\mymarkboth}[2]{\markboth{#1}{#2}}
+
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+%
+% redefine page style
+%
+\usepackage{fancyhdr}
+% choose pagestyle fancy and define it
+\pagestyle{fancy}
+\fancyhead{} %clear everything
+\fancyfoot{} %clear everything
+\addtolength{\headheight}{1.5pt}
+\addtolength{\headwidth}{2.5\marginparsep}
+\renewcommand{\chaptermark}[1]{\mymarkboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\mymarkright{#1}}
+\fancyfoot[EL,OR]{\bfseries\itshape\thepage}
+\fancyhead[EL]{\nouppercase{\bfseries\itshape\leftmark}}
+\fancyhead[OR]{\nouppercase{\bfseries\itshape\rightmark}}
+\renewcommand{\headrulewidth}{1pt}
+
+% redefine plain page style. used on first pages of chapters et.c.
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[EL,OR]{\bfseries\itshape\thepage}%
+\renewcommand{\headrulewidth}{0pt}
+}
+
+
+%
+% redefine bullet. looks better with an ndash.
+%
+\renewcommand{\labelitemi}{\bfseries--}
+
+%
+% define styles for section and subsection headings
+%
+
+%\font\tenhv  = phvb at 12pt
+%\newcommand{\hvfont}{\fontfamily{phv}\selectfont}
+%\newcommand{\hvfont}{\fontfamily{phv}\fontseries{bc}\selectfont}
+
+\newcommand{\secstyle}{\normalfont\itshape\bfseries\large}
+%\newcommand{\secstyle}{\hvfont\itshape\large}
+\newcommand{\subsecstyle}{\normalfont\itshape\large}
+\newcommand{\paragraphstyle}{\normalfont\itshape}
+
+
+%
+% redefine look of sections, subsections and paragraphs.
+%
+\makeatletter
+\renewcommand{\section}{%
+\@startsection
+  {section}%   the name
+  {1}%         the level
+  {0pt} %{-\Myindent}%       the indent
+  {-2\baselineskip}%   beforeskip
+  {\baselineskip}%    afterskip
+  {\secstyle}}%   style
+\renewcommand{\subsection}{%
+\@startsection
+  {subsection}%   the name
+  {2}%         the level
+  {0pt}%{-\Myindent}%       the indent
+  {-\baselineskip}%   beforeskip
+  {0.5\baselineskip}%    afterskip
+  {\subsecstyle}}%   style
+\renewcommand{\paragraph}{%
+\@startsection
+  {paragraph}%   the name
+  {4}%         the level
+  {0pt}%{-\Myindent}%       the indent
+  {-\baselineskip}%   beforeskip
+  {-1em}%    afterskip
+  {\paragraphstyle}}%   style
+\makeatother
+
+
+
+
+%%
+%% modify margins...
+%%
+\addtolength{\oddsidemargin}{-0.5cm}
+%\addtolength{\evensidemargin}{-0.5cm}
+\addtolength{\textwidth}{0.5cm}
+
+
+
+
+
+%
+% a simple listing environment
+%
+\newcommand{\MyListing}[1]{\begin{quote}\ttfamily#1\end{quote}}
+
+
+%
+% listings settings
+%
+\lstset{language=c++}
+%\lstset{basicstyle=\small\rmfamily}
+\lstset{basicstyle=\ttfamily}
+\lstset{stringstyle=\ttfamily}
+\lstset{keywordstyle=\ttfamily}
+\lstset{commentstyle=\itshape}
+\lstset{showstringspaces=false}
+\lstset{breaklines}
+
+%
+% input various macros
+%
+\input{macros.tex}
+
+%
+% define theorem and postulate styles.
+%
+\theoremstyle{break}
+\newtheorem{postulate}{Postulate}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newenvironment{proof}{\emph{Proof:}}{$\blacksquare$\vspace{0.5cm}}
+
+%\newcommand{\myfigure}[3]{\hvFloat[capPos=r,capVPos=b]{figure}{#1}{#2}{#3}}
+\newcommand{\myfigure}[3]{\begin{figure}\centering #1\caption{#2}\label{#3}\end{figure}}
+
+%
+% define rules above/below figures
+%
+\newcommand{\topfigrule}{\vskip 5pt \hrule \vskip-5.4pt}
+\newcommand{\botfigrule}{\vskip-5pt \hrule \vskip 5.4pt}
+\setlength{\textfloatsep}{6mm}
+
+\addtolength{\intextsep}{4mm}
+%\addtolength{\abovedisplayskip}{4mm}
+%\addtolength{\belowdisplayskip}{4mm}
+
+
+
+%\title{A Critical Study of the Finite Difference and Finite Element
+%  Methods for the Time Dependent Schrödinger Equation}
+%\author{Simen Kvaal}
+
+%
+% begin document
+%
+\begin{document}
+%%
+%% front page
+%%
+\thispagestyle{empty}%
+\begin{center}\includegraphics[height=0.95\textheight]{illustrator/forside.eps}\end{center}
+
+
+
+
+\begin{comment}
+
+It would appear that we have reached the limits of what it is possible
+to achieve with computer technology, although one should be careful
+with such statements, as they tend to sound pretty silly in five
+years.
+
+-- John von Neumann 
+
+
+If quantum mechanics hasn't profoundly shocked you, you haven't understood it yet. 
+
+-- Niels Bohr
+
+\end{comment}
+
+
+
+
+
+\clearpage
+
+\thispagestyle{empty}
+
+\phantom{Ignore me!}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+\pagenumbering{roman}      % i,ii,iii,iv...
+\input{chapter_intro.tex}
+\cleardoublepage
+
+\thispagestyle{empty}
+\cleardoublepage
+
+
+\tableofcontents
+
+\clearemptydoublepage
+%\pagestyle{empty}
+\pagenumbering{arabic}
+%\pagestyle{fancy}
+
+
+\input{chapter_1.tex}
+\clearemptydoublepage
+\input{chapter_2.tex}
+\clearemptydoublepage
+\input{chapter_schroedinger.tex}
+\clearemptydoublepage
+\input{chapter_numerics.tex}
+\clearemptydoublepage
+\input{chapter_la.tex}
+\clearemptydoublepage
+%\newcommand{\Hilb}{\mathcal{H}}
+\input{chapter_qm_eigen.tex}
+
+\clearemptydoublepage
+\input{chapter_se_solve.tex}
+\clearemptydoublepage
+\input{chapter_conclusion.tex}
+\clearemptydoublepage
+
+\appendix
+\input{app_math.tex}
+\clearemptydoublepage
+\input{app_listings.tex}
+\clearemptydoublepage
+
+\bibliographystyle{unsrt}
+\bibliography{simen_kvaal}
+\markboth{Bibliography}{Bibliography}
+
+\end{document}
+

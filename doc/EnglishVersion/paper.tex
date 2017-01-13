@@ -1,0 +1,334 @@
+
+%  Tex-fil for eksamensoppgaver i FYS 113
+%
+\documentclass[11pt]{article}
+%
+\usepackage[T1]{fontenc}       % DC-fonter
+\usepackage{epsfig}
+\usepackage{a4}
+\usepackage{norsk}             % Norske ord
+\renewcommand{\rmdefault}{ptm} % Times
+%
+%%
+\addtolength\textwidth{1cm}
+%	\addtolength\evensidemargin{-1cm}
+%	\addtolength\oddsidemargin{1cm}
+
+\listfiles
+
+% Spesielle kommandoer
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+%
+\newcommand{\BE}{\begin{eqnarray}}
+%
+\newcommand{\EE}{\end{eqnarray}}
+%
+\newcommand{\BES}{\begin{eqnarray*}}
+%
+\newcommand{\EES}{\end{eqnarray*}}
+%
+
+
+
+%
+\pagestyle{myheadings}
+%
+
+\begin{document}
+
+\newpage
+
+%
+\begin{center}
+\LARGE \bf UNIVERSITETET I OSLO
+\end{center}
+%
+{\Large Det matematisk-naturvitenskapelige fakultet}\\[2ex]
+%
+Eksamen i FYS-113: Kvantefysikk\\
+Eksamensdag: Tirsdag 19 juni 2001\\
+Tid for eksamen: 0900 - 1500\\
+Eksamenssettet  best\aa r av 4 sider, kontroll\'{e}r at du har riktig antall.\\
+\begin{minipage}[t]{0.3\textwidth}
+Tillatte hjelpemidler:
+\end{minipage}
+\hspace*{0.1\textwidth}
+\begin{minipage}[t]{0.6\textwidth}
+{\O}grim: St{\o}rrelser og enheter i fysikken\\
+Rottmann: Matematische Formelsamlung\\
+To A4 ark med egne notater\\
+Godkjent numerisk elektronisk kalkulator
+\end{minipage}
+
+
+
+\noindent {\Large \bf Oppgave 1.}\\[1ex]
+%
+\noindent
+
+Vi skal studere r\o ntgenstr\aa ling ved hjelp av et r\o ntgenr\o r, 
+der vi lar
+en elektronstr\aa le gjennoml\o pe et spenningsfall $V$ f\o r den treffer
+en anode. Et eksempel p\aa\ den resulterende str\aa lingen for en slik
+prosess er vist i figur 1. 
+\begin{itemize}
+%
+\item[a)] Tegn en skjematisk skisse av et r\o ntgenr\o r og forklar kort
+hvordan r\o ntgenstr\aa ling dannes. 
+Forklar den jevne kontinuerlige delen av
+intensitetsfordelingen.
+\item [b)] Skriv ned og begrunn sammenhengen mellom spenningen
+$V$ og den minste b\o lgelengden $\lambda_{\mathrm{min}}$ for
+r\o ntgenstr\aa lning. 
+Gj\o r det samme for $V$ og den maksimale frekvensen
+$\nu_{\mathrm{maks}}$. Bruk figur 1 til \aa\ finne spenningen $V$,
+$\nu_{\mathrm{maks}}$ og den maksimale energien for r\o ntgenstr\aa lning.
+\item [d)] Forklar \aa rsaken til de skarpe toppene (s\aa kalte
+karakteristiske linjer) i figur 1. I figuren ser vi ogs\aa\ to 
+topper $\alpha_1$ og $\alpha_2$ ved n\ae r samme b\o lgelengde.
+Forklar den fysiske prosessen som gir opphav til en slik oppsplitting 
+i to topper $\alpha_1$ og $\alpha_2$. 
+
+\end{itemize}
+\begin{figure}[h]
+\vspace{6cm}
+\caption{ }
+\end{figure}
+
+
+%
+
+
+
+
+
+
+
+\noindent
+\noindent{\Large \bf Oppgave 2.}\\[1ex]
+\noindent
+I denne oppgaver skal vi studere heliumatomet som består av en atomkjerne
+og  to elektroner. 
+% 
+\begin{itemize}
+% 
+\item[a)] Lag en skisse som beskriver heliumatomet som fysisk system
+og defin\'{e}r koordinatene som trengs for å beskrive systemet.
+Vi ser i denne oppgaver bort
+fra ledd som beskriver spinn-bane effekten.
+
+Systemets hamiltonoperator kan da skrives 
+\[
+   \OP{H}_{\mathrm{He}}=-\frac{\hbar^2\nabla_1^2}{2m_e}-\frac{\hbar^2\nabla_2^2}{2m_e}
+          -\frac{2ke^2}{r_1}-\frac{2ke^2}{r_2}+
+               \frac{ke^2}{r_{12}},
+\]
+hvor $k=\frac{1}{4\pi\epsilon_0}$ og $m_e$ elektronets masse. 
+Forklar kort hva de ulike leddene st\aa r for.
+% 
+\item[b)] Ta utgangspunkt i den kvantemekaniske løsningen av
+hydrogenatomet 
+%
+\begin{equation}
+\OP{H}_{\mathrm{H}} |\psi_{nlm_lm_s} \rangle
+      = - E_0\frac{1}{n^2}|\psi_{nlm_lm_s} \rangle
+\end{equation}
+%
+$E_0 =\frac{1}{2}\frac{e^4m_e}{(4\pi\epsilon_0)^2\hbar^2}=13.6$ eV.
+
+ Finn en tilnærmet løsning for heliumatomet
+hvor vi utnytter tilstanden i likning  (1)  over 
+og neglisjerer vekselvirkningen
+mellom elektronene.
+Bestem den tilnærmede verdien av energien for grunntilstanden. 
+Angi med begrunnelse elektronkonfigurasjonen og  kvantetallene $L$, $S$ og $J$.
+
+%
+\end{itemize}
+%
+I det følgende skal vi bruke sentralfeltmodellen med et energispekter 
+gitt i figur~2 
+og studere  eksiterte tilstander for heliumatomet.
+\begin{figure}
+\vspace{6cm}
+\caption{ }
+\end{figure}
+% 
+\begin{itemize}
+%
+\item[c)] Sett opp alle eksiterte tilstander for heliumatomet hvor
+ett elektron er i $1s$ mens det andre kan være i $2s$ eller $2p$. Bestem
+eksitasjonesenergien og elektron konfigurasjonen. Angi med begrunnelse
+kvantetallene $L$, $S$ og $J$ for alle tilstandene.
+%
+\end{itemize}
+% 
+Noen av tilstandene under punkt c) har $S = 0$ (singlet) mens andre har
+$S = 1$ (triplet). Eksperimentelt har slike tilstander som  kun
+adskiller seg på kvantetallet $S$, forskjellig energi.
+% 
+\begin{itemize}
+% 
+\item[d)] Forklar  hvilken mekanisme som ligger til grunn for denne
+forskjellen og angi hvilken kvalitativ effekt den har.
+%
+\item[e)] Hvis heliumatomet er i en eksitert tilstand kan den i visse
+tilfeller henfalle til en annen tilstand med lavere energi gjennom
+dipol stråling. Sett opp utvalgsreglene for slik stråling og angi de
+mulige dipol overgangene i det eksiterte spektret som ble funnet ovenfor. 
+%
+\end{itemize}
+% 
+Vi skal i den resterende del av oppgaven returnere til heliumatomets
+grunntilstand diskutert under punkt a) og b) og prøve å finne en bedre
+løsning for grunntilstandsenergien.
+
+Vi antar en grunntilstands konfigurasjon $1s^2$ og hvert av
+elektronene har en bølgefunksjon av formen 
+%
+\[
+g(r) = \frac{\beta^{3/2}}{\sqrt{\pi}} \exp( -\beta r)
+\]
+% 
+hvor $\beta$ er en konstant som vi skal variere for å oppnå en best
+mulig verdien på grunntilstands energien.
+Til en slik beregning trenger vi endel tredimensjonale rom--integraler
+%
+\[
+\int \left \{ g(r)\right \}^2 d\vec{r} = 1; \;\;\;
+\int \left \{ g(r)\right \}^2 \frac{1}{r} d\vec{r} = \beta; \;\;\;
+\int g(r) \nabla^2 g(r) d\vec{r} = -\beta^2,
+\]
+%
+og det dobbelte rom--integralet
+%
+\[
+\int \int \left \{ g(r_1) \right \}^2 \left \{ g(r_2) \right \}^2
+				\frac{1}{r_{12}}  d\vec{r}_1 d\vec{r}_2 = \frac{5}{8} \beta
+					 \;\;\; hvor \;\;\; r_{12} = | \vec{r_1} - \vec{r_2} |.
+\]
+%
+\begin{itemize}
+% 
+\item[f)]  Vis at forventningsverdien (middelverdien) 
+$\langle \OP{H}_{\mathrm{He}}\rangle$ fra punkt a)
+i den gitte konfigurasjonen gir følgende uttrykk
+%
+\[
+\langle\OP{H}_{\mathrm{He}} \rangle = \frac{\hbar^2}{m_e} \beta^2
+		  - \frac{27}{32} \frac{e^2}{\pi \epsilon_0} \beta.
+\]
+\end{itemize}
+%
+%
+Vi kan n{\aa} finne energien i grunntilstanden ganske n{\o}yaktig ved
+et variasjonsprinsipp. Det sier at b{\o}lgefunksjoner som ikke er
+lik den eksakte energi egenfunksjonen for
+grunntilstanden, alltid gir en forventningsverdi for energien  som er
+st{\o}rre enn den virkelige egenverdien.
+Metoden g{\aa}r ut p{\aa} {\aa} finne den b{\o}lgefunksjonen
+(av typen $g(r)$ ), som gir den minste
+forventningsverdien for energien.
+%
+\begin{itemize}
+%
+\item[g)] Hvilken (tiln{\ae}rmet) verdi for energien i grunntilstanden
+finner vi etter den skisserte metoden?\\
+Til kontroll: Eksperimentelt er energien $-78,98 $~eV.
+
+%
+\end{itemize}
+
+
+
+\noindent
+\noindent{\Large \bf Oppgave 3.}\\[1ex]
+\noindent
+\begin{itemize}
+\item[a)]
+Forklar kort hvilken fysisk betydning vi tillegger en b\o lgefunksjon 
+$\Psi(\vec{r},t)$ i kvantemekanikken, hvor $\vec{r}$ er romkoordinaten
+og $t$ tiden. Hvilke matematiske krav m\aa\
+vi stille til en slik b\o lgefunksjon?
+Forklar kort hva vi mener med en kvantemekanisk 
+operator, dens forventningsverdi  og en egenfunksjon
+for en operator.
+\item[b)] Skriv ned den tidsavhengige Schr\"odingerlikningen for en partikkel
+med potensiell energi $V(\vec{r})$ og vis at l\o sningene kan skrives 
+p\aa\ formen
+\[
+   \Psi(\vec{r},t)= \psi(\vec{r})\exp{(-iEt/\hbar)},
+\]
+og finn likningen som $\psi(\vec{r})$ tilfredsstiller. 
+
+\end{itemize}
+
+
+Vi skal i resten av denne oppgaven studere det 
+kvantemekaniske problemet for et
+elektron som er fanget inn i et en-dimensjonalt harmonisk oscillator potensial
+$V(x)=\frac{1}{2}kx^2$. 
+Vi skal bruke enhet $eV$ for energi og $nm$ for lengde. 
+Massen til elektronet er $m_e$ og $k$ er en reell konstant.
+Hamiltonoperatoren 
+$\hat{H}$ kan skrives som 
+\begin{displaymath}
+\hat{H} = -\frac{\hbar^2}{2m_e}\frac{d^2}{dx^2} +\frac{1}{2}kx^2.
+\end{displaymath}
+Tilstandsfunksjonen for de to laveste tilstandene ved tiden $t=0$ er gitt ved
+\begin{displaymath}
+ \psi_0(x)=\left(\frac{\alpha}{\sqrt{\pi}}\right)^{\frac{1}{2}}
+                 \exp{(-\frac{1}{2}\alpha^2x^2)}, 
+\end{displaymath}
+og 
+\begin{displaymath}
+ \psi_1(x)= \left(\frac{2\alpha^3}{\sqrt{\pi}}\right)^{\frac{1}{2}}
+                 x\exp{(-\frac{1}{2}\alpha^2x^2)}, 
+\end{displaymath}
+
+\begin{itemize}
+\item[c)] Vis at begge tilstandsfunksjonene er energi egentilstander for
+den harmoniske oscillatoren og bestem konstanten $\alpha$ (funksjonene er normerte). Finn 
+de tilh\o rende energi egenverdiene. 
+Uttrykk energien ved hjelp av vinkelhastigheten $\omega =\sqrt{k/m_e}$.
+Skriv ned b\o lgefunksjonene
+$\Psi_0(x, t)$ og $\Psi_1(x, t)$ ved tiden $t$. 
+\end{itemize}
+Det elektriske dipolmomentet er gitt ved $D=-ex$. Den kvantemekaniske 
+forventningsverdien for dipolmomentet ved tiden $t=0$ er gitt ved
+\begin{displaymath}
+ -e\langle x\rangle =-e\int_{-\infty}^{\infty}
+                      \Psi_i(x,t)^*x\Psi_j(x,t)dx, 
+\end{displaymath}
+hvor $i$ og $j$ kan svare til tilstandene 
+$\Psi_0(x,t)$ og $\Psi_1(x, t)$.
+
+\begin{itemize}
+\item[d)] 
+Hvilke av kombinasjonene $i=0,1$ og $j=0,1$ er forskjellige fra null?
+Hva forteller det om elektrisk dipoloverganger? 
+\end{itemize}
+
+Systemet er n\aa\ i en blandet tilstand gitt ved
+\begin{displaymath}
+    \Psi(x,t)=\frac{1}{\sqrt{2}}\left(\Psi_0(x, t)+\Psi_1(x, t)\right).
+\end{displaymath}
+\begin{itemize}
+\item[e)] Bruk de tidsavhengige l\o sningene fra punkt c) til \aa\
+rekne ut dipolmomentet ved $t\neq 0$ 
+\begin{displaymath}
+ -e\langle x(t)\rangle =-e\int_{-\infty}^{\infty}
+                      \Psi(x,t)^*x\Psi(x,t)dx. 
+\end{displaymath}
+som funksjon av vinkelhastigheten
+$\omega$. 
+
+\end{itemize}
+
+
+
+
+
+
+\end{document}
+

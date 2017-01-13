@@ -1,0 +1,398 @@
+
+%  Tex-fil for eksamensoppgaver i FYS 113
+%
+\documentclass[11pt]{article}
+%
+\usepackage[T1]{fontenc}       % DC-fonter
+\usepackage{epsfig}
+\usepackage{a4}
+\usepackage{norsk}             % Norske ord
+\renewcommand{\rmdefault}{ptm} % Times
+%
+%%
+\addtolength\textwidth{1cm}
+%	\addtolength\evensidemargin{-1cm}
+%	\addtolength\oddsidemargin{1cm}
+
+\listfiles
+
+% Spesielle kommandoer
+\newcommand{\OP}[1]{{\bf\widehat{#1}}}
+%
+\pagestyle{myheadings}
+%
+
+\begin{document}
+
+\newpage
+
+%
+\begin{center}
+\LARGE \bf UNIVERSITETET I OSLO
+\end{center}
+%
+{\Large Det matematisk-naturvitenskapelige fakultet}\\[2ex]
+%
+Eksamen i FYS-113: Kvantefysikk\\
+Eksamensdag: Tirsdag 20 juni 2000\\
+Tid for eksamen: 0900 - 1500\\
+Eksamenssettet  best\aa r av 4 sider, kontroll\'{e}r at du har riktig antall.\\
+\begin{minipage}[t]{0.3\textwidth}
+Tillatte hjelpemidler:
+\end{minipage}
+\hspace*{0.1\textwidth}
+\begin{minipage}[t]{0.6\textwidth}
+{\O}grim: St{\o}rrelser og enheter i fysikken\\
+Rottmann: Matematische Formelsamlung\\
+To A4 ark med egne notater\\
+Godkjent numerisk elektronisk kalkulator
+\end{minipage}
+
+
+
+\noindent {\Large \bf Oppgave 1.}\\[1ex]
+%
+\begin{itemize}
+\item[a)]  Gj\o r kort rede for den fotoelektriske effekten og skiss\'{e}r
+en eksperimentell oppstilling som kan observere og m\aa le
+denne effekten. 
+\item[b)] Et fotoelektrisk eksperiment gj\o res med
+kalsium som metall. F\o lgende stoppepotensialer 
+$V_s$ m\aa les
+\begin{table}[h]
+\begin{center} 
+\begin{tabular}{|l|llll|} \hline
+B\o lgeldengde $\lambda$ [nm] & 253,6 & 313,2 & 365,0 & 404,7 \\ \hline 
+Stoppepotensial $V_s$ [V] & 1,95 & 0,98 & 0,50 & 0,14 \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+B\o lgelengden for den elektromagnetiske str\aa ling er gitt
+ved $\lambda$. 
+Bruk tallene
+i tabellen til \aa\ finne Plancks konstant. 
+Du kan f\aa\ bruk for f\o lgende konstanter; 
+$c=2,997925 \times 10^{8}$ m s$^{-1}$  og 
+$h= 4,135669 \times 10^{-15}$eV s.
+
+
+\item[c)] Vi skal n\aa\ studere Compton spredning. 
+I den anledning trenger vi 
+det relativistiske uttrykket for energi av en partikkel
+%
+\[
+E = mc^2= \sqrt{E_0^2 + (pc)^2}.
+\]
+%
+Som energi enhet bruk $eV$ og $eV/c$ som enhet for bevegelsesmengde.
+%
+ Gj{\o}r kort rede for de st{\o}rrelser som inng{\aa}r i relasjonen
+ovenfor.
+%
+%\item[d)] Anvend relasjonen ovenfor p{\aa} et foton og finn fotonets
+%energi og bevegelsesmengde n{\aa}r b{\o}lgelengden er
+%$500 \; nm = 5,00 \times 10^{-7}\; m$.
+%
+
+%
+\item[d)] Et foton med energi $E = h \nu_0 = h c / \lambda_0$ spres en vinkel
+$\theta$ ved Comptoneffekt
+mot et elektron som antas {\aa} ligge i ro f{\o}r spredning.
+Tegn en prinsippskisse for et Compton eksperiment
+og angi spredningsvinklene for fotonet og elektronet etter
+spredningen.
+
+Formul\'{e}r de to prinsippene som anvendes til {\aa} beregne
+det spredte fotonets b{\o}lgelengde $\lambda^{'}$ og 
+til {\aa} utlede Comptons formel (skal ikke utledes).
+
+Vis deretter at et fritt elektron i ro ikke kan absorbere
+et foton. 
+
+\item[e)]  Bruk det siste resultatet til \aa\ gj\o re rede
+for forskjellen mellom Compton spredning og fotoelektrisk
+effekt.
+\end{itemize}
+%
+
+
+
+\noindent
+{\Large \bf Oppgave 2.}\\[1ex]
+%
+
+Vi skal i denne oppgaven studere det kvantemekaniske problemet for et
+elektron i et en-dimensjonalt potensial
+$V(x)$ gitt ved
+\[
+  V(x)=\left\{\begin{array} {cc} -k/x & 0 \leq x < \infty \\
+                            0& \mathrm{ellers}\end{array} \right.
+\] 
+Vi skal bruke enhet $eV$ for energi og $nm$ for lengde. 
+Massen til elektronet er $m_e$. $k$ er en reell konstant.
+\begin{enumerate}
+\item[a)]
+Hamilton operatoren 
+$\hat{H}$ kan skrives som 
+\begin{displaymath}
+\hat{H} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} -\frac{k}{x}.
+\end{displaymath}
+Hvilken fysisk st\o rrelse representerer Hamilton operatoren?
+Hvilken dimensjon og enhet m\aa\ konstanten $k$ ha?
+Sett opp den tidsuavhengige Schr\"{o}dingerlikningen for
+dette systemet med egenfunksjon $\psi_i(x)$.   
+
+\end{enumerate}
+
+Grunntilstanden for systemet har egenfunksjonen
+\[
+   \psi _0(x) = N xe^{-\alpha x},
+\]
+der $\alpha$ er en reell konstant og $N$ er en normeringskonstant.
+Egenfunksjonen er null for $x < 0$. 
+\begin{enumerate}
+\item[b)] Beregn normeringskonstanten $N$ uttrykt ved $\alpha$.
+
+F\o lgende integral kan v\ae re nyttig
+\[
+\int_{0}^{\infty}x^ne^{-x}dx = n! 
+\]
+
+ 
+\item[c)] Vis at $\psi _0(x)$ er en egenfunksjon for $\hat{H}$ 
+og finn den tilh\o rende energiegenverdien for grunntilstanden
+$E_0$ som funksjon av $\alpha$. Finn ogs\aa\ konstanten 
+$k$ som funksjon av $\alpha$.  
+
+\item[d)] Vis at forventningsverdien i grunntilstanden for
+$\langle \hat{p}^2 \rangle=-2m_eE_0$, 
+hvor $E_0$ er grunntilstandsenergien
+du fant i forrige punkt. 
+
+\item[e)] Vis deretter at
+\[
+\langle \hat{x} \rangle=\frac{3}{2\alpha},
+\]
+og at
+$\langle \hat{p} \rangle=0$.
+\end{enumerate}
+
+Uskarpheten for den fysiske st\o rrelsen $A$ er gitt ved
+\[
+   \Delta A=\sqrt{\langle \hat{A}^2\rangle - \langle \hat{A}\rangle^2}.
+\]
+\begin{enumerate}
+\item[f)] Rekn ut b\aa de $\Delta p$ og $\Delta x$. Formuler Heisenbergs
+uskarphetsrelasjon og gi en fysisk forklaring p\aa\ de st\o rrelsene
+som inng\aa r. Sjekk at resultatene for   $\Delta p$ og $\Delta x$
+er i samsvar med Heisenbergs
+uskarphetsrelasjon.   
+\end{enumerate}
+
+\noindent
+\noindent{\Large \bf Oppgave 3.}\\[1ex]
+\noindent
+I den enkle skallmodellen for fler-elektron atomer plasseres elektronene i
+tilstander som har de samme kvantetallene som energi egentilstandene for
+Hydrogenatomet:\\
+$1s; 2s, 2p; 3s, 3p, 3d;\ldots ;nl = n0, nl = n1, \ldots, nl = n,n-1$.
+\begin{itemize}
+%
+\item[a)] Hvor mange elektroner kan det plasseres i hver av tilstandene
+i hovedskallene 
+$1s; 2s, 2p; 3s, 3p, 3d;\ldots ;$ $ nl = n0, \ldots , nl = n,n-1$?
+Skriv ned det prinsippet som bestemmer hvor mange elektroner
+det kan v\ae re i hver tilstand.
+%
+\end{itemize}
+
+\begin{minipage}{0.45\textwidth}
+%
+I H-atomet har tilstandene $nl = n0, nl = n1\ldots , nl = n,n-1$ alle
+samme energi. De er degenererte. I et fler-elektron
+atom, er dette ikke lenger tilfelle. Figuren 
+viser $nl$~tilstandene for sentralfeltmodellen.
+
+\begin{itemize}
+% 
+\item[b)] Diskuter årsaken til at tilstandene i
+figuren ved siden av 
+er forskjellige fra Hydrogenatomets tilstander.
+%
+\end{itemize}
+
+%
+
+\end{minipage}
+%
+\hspace{0.05\textwidth}
+%
+\begin{minipage}{0.50\textwidth}
+%
+\begin{center}
+\setlength{\unitlength}{1.0mm}
+\begin{picture}(50,85)(0,-15)
+\thicklines
+%1s
+\put(10,0){1s}
+\put(20,0){\line(1,0){10}}
+%2s2p
+\put(10,10){2s}
+\put(20,10){\line(1,0){10}}
+\put(10,15){2p}
+\put(20,15){\line(1,0){10}}
+%3s3p
+\put(10,25){3s}
+\put(20,25){\line(1,0){10}}
+\put(10,30){3p}
+\put(20,30){\line(1,0){10}}
+
+%4s3d4p
+\put(10,40){4s}
+\put(20,40){\line(1,0){10}}
+\put(10,45){4p}
+\put(20,45){\line(1,0){10}}
+\put(10,50){3d}
+\put(20,50){\line(1,0){10}}
+\put(0,-10){Niv\aa\ i sentralfelt modellen}
+\end{picture}
+\end{center}
+%\end{center}
+\end{minipage}
+%
+\vspace{0.1mm}
+
+
+\noindent
+I denne oppgaven skal vi studere Kaliumatomet som har 19 elektroner.
+% 
+\begin{itemize}
+% 
+\item[c)] Bruk figuren til å bestemme elektron
+konfigurasjonen i grunntilstanden for Kaliumatomet. Finn verdiene for 
+kvantetallet (S) for det totale egenspinn, kvantetallet (L) for
+det totale banespinn og kvantetallet (J) for det totale spinn. 
+%
+\end{itemize}
+Energien til den f\o rste eksiterte tilstanden er bestemt eksperimentelt til
+1,617~eV. En n\ae rmere analyse viser at denne tilstanden er splittet
+i to. Energi oppsplittingen for denne dubletten skyldes spinn-bane
+koplingen.
+
+\begin{itemize}
+\item[d)]
+Bruk figuren til \aa\ bestemme elektron konfigurasjonen for den f\o rste
+eksiterte dublett tilstanden. Finn deretter kvantetallene S, L
+og J for de to tilstandene i denne dubletten. 
+\end{itemize}
+% 
+ Tilleggsenergien p\aa\ grunn av spinn-bane koplingen  kan skrives 
+% 
+\[
+\OP{H}_{SL} = a \OP{S}\cdot \OP{L}
+\]
+hvor $a$ er en konstant.
+% 
+\begin{itemize}
+% 
+\item[e)] Finn energi differansen mellom tilstandene i dubletten når $a$
+har en verdi gitt ved $a\hbar^2 = 0,0075$~eV. 
+% 
+\end{itemize}
+
+%
+Dersom Kaliumatomet er i en av de to dublett tilstandene
+vil
+det g\aa ~over til grunntilstanden og emittere et foton.
+%
+\begin{itemize}
+%
+\item[g)] Hvor stor b\o lgelengdeoppl\o sning
+m\aa ~en minst ha for \aa ~skille
+spektrallinjene fra de to overgangene
+ i et spektrometer?
+%
+\end{itemize}
+%
+
+N\aa r vi tar hensyn til egenspinn-banespinn kobling (spinn-banekobling) er
+operatoren $\OP{M}$ for det magnetiske dipol
+momentet gitt ved
+
+\[
+\OP{M} = -\frac{e}{2m_e} g \OP{J},
+\]
+
+der $m_e$ er elektronets hvilemasse,
+$\OP{J}$ er operatoren for det
+totale spinnet og
+
+\[
+g = 1 + \frac{j(j+1) + s(s+1) -l(l+1)}{2j(j+1)}.
+\]
+
+\begin{itemize}
+
+\item[h)] Bestem verdien av $g$ for grunntilstanden og de to første
+eksiterte tilstandene.
+
+\end{itemize}
+
+
+
+
+
+
+Dersom Kaliumatomet plasseres i et svakt og homogent ytre magnetfelt
+$\vec{B}$ vil
+vekselvirkningen mellom atomets magnetiske dipolmoment $\OP{M}$
+og magnetfeltet
+$\vec{B}$ gi opphav til et ekstra ledd $\OP{H}^{'}$ i
+Hamiltonoperatoren
+%
+\[
+\OP{H}^{'} = - \OP{M} \cdot \vec{B}.
+\]
+%
+$\OP{H}^{'}$ vil gi opphav til en splitting av energiniv\aa ene.
+%
+\begin{itemize}
+%
+\item[i)] Beregn, uttrykt ved $\mu_{B} = e \hbar / 2 m$ og feltstyrken B,
+energi oppsplittingen av grunntilstanden og de to første eksiterte
+tilstandene og deres degenerasjonsgrad.
+%
+\end{itemize}
+%
+Utvalgsreglene for elektromagnetiske dipoloverganger er $\Delta j = 0, \pm 1$;
+$\Delta m_{j} = 0, \pm 1$; \mbox{$\Delta l = \pm 1$}.
+%
+\begin{itemize}
+%
+\item[j)] Tegn figurer som viser hvordan overgangene
+fra de to første eksiterte tilstanden til grunntilstandene blir 
+og hvordan de tilsvarende spektrallinjene blir modifisert av 
+magnetfeltet $\vec{B}$.
+%
+\end{itemize}
+%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
